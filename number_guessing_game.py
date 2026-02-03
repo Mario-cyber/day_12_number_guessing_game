@@ -1,3 +1,5 @@
+import random
+
 # generate global variables 
 
 NUMBERS  = []
@@ -7,3 +9,7 @@ COMPUTER_GUESS = 0
 for i in range(1,101,1):
     NUMBERS.append(i)
 
+# computer selects a random card 
+COMPUTER_GUESS = NUMBERS[random.randint(0,99)]
+
+print(COMPUTER_GUESS)
