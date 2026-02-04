@@ -26,8 +26,11 @@ print(difficulty)
 
 #define functions here:
 
-def hard_mode(guess):
-    attemps = 5 
+def guess_game():
+    if difficulty == "h":
+        attemps = 5
+    elif difficulty == "e":
+        attemps = 10 
     while attemps > 0 :
         user_guess = int(input("enter your guess: "))
         if user_guess == COMPUTER_GUESS:
@@ -38,7 +41,5 @@ def hard_mode(guess):
             print(f"nope try again \n {attemps} remiaing")
 
 
-if difficulty == "h": 
-   hard_mode(COMPUTER_GUESS)
-elif difficulty == "e":
-    print("goodbye")
+guess_game()
+
