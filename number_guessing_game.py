@@ -20,3 +20,9 @@ print(COMPUTER_GUESS)
 print(f"Welcome to the number gessing game! \nI'm thinking of a number between 1 and 100")
 difficulty = input("Chose a difficulty, type 'e' or 'h: ").lower()
 
+print(difficulty)
+
+if difficulty == "h": 
+    print("h")
+elif difficulty == "e":
+    print("goodbye")
