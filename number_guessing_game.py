@@ -20,16 +20,16 @@ COMPUTER_GUESS = 60
 #welcome interphase 
 
 print(f"Welcome to the number gessing game! \nI'm thinking of a number between 1 and 100")
-difficulty = input("Chose a difficulty, type 'e' or 'h: ").lower()
+difficulty = input("Chose a difficulty, type 'easy' or 'hard: ").lower()
 
 print(difficulty)
 
 #define functions here:
 
 def guess_game():
-    if difficulty == "h":
+    if difficulty == "hard":
         attemps = 5
-    elif difficulty == "e":
+    elif difficulty == "easy":
         attemps = 10 
     while attemps > 0 :
         user_guess = int(input("enter your guess: "))
@@ -38,7 +38,11 @@ def guess_game():
             attemps = 0
         else: 
             attemps = attemps - 1 
-            print(f"nope try again \n {attemps} remiaing")
+            if user_guess > COMPUTER_GUESS:
+                print("too high")
+            else:
+                print("too low")
+            print(f"you have {attemps} attempts remiaing")
 
 
 guess_game()
